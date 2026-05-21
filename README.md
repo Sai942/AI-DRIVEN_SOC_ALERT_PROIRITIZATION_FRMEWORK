@@ -8,6 +8,41 @@ This project provides an end-to-end, AI-driven framework and interactive dashboa
 *Developed with a core focus on practical Machine Learning Applications.*
 
 ---
+---
+
+## 📊 Model Performance
+
+![ROC Curve - Attack Detection](assets/Screenshot_2026-05-06_144246.png)  
+*ROC Curve comparing the predictive power of Logistic Regression, XGBoost, and the production Random Forest model.*
+
+The framework evaluated Logistic Regression, XGBoost, and Random Forest against a strict 20% holdout test set (123,475 flows).
+
+| Machine Learning Classifier | Overall Accuracy | Macro Precision | Macro Recall | False Positive Rate (FPR) |
+| :--- | :--- | :--- | :--- | :--- |
+| Logistic Regression (Baseline) | 98.21% | 0.88 | 0.86 | 0.17% |
+| XGBoost (Gradient Boosting) | 99.50% | 0.95 | 0.94 | 0.04% |
+| **Random Forest (Production Model)** | **99.58%** | **0.96** | **0.96** | **0.04%** |
+
+The Random Forest classifier emerged as the definitive champion. By utilizing ensemble bagging (100 independent decision trees), the model effectively neutralized variance and achieved a state-of-the-art 99.58% classification accuracy, representing a 99.8% reduction in false positive generation compared to legacy systems.
+
+---
+
+## 🖥️ Dashboard & Interface Walkthrough
+The final result of the framework is a fully operational, interactive Streamlit application designed for immediate SOC deployment.
+
+### 1. Dashboard Overview
+![SOC-AI Dashboard Overview](assets/Screenshot_2026-05-06_143945.jpg)  
+The executive view displaying active alert counts categorized by severity (High/Medium/Low). Features real-time KPI tracking (FPR Estimate, Precision Est.), a visual Attack Distribution ring chart, and a live Alert Timeline graph tracking anomaly volume over the last 60 seconds.
+
+### 2. Live Traffic Monitor
+![SOC-AI Live Traffic Monitor](assets/Screenshot_2026-05-06_144014.png)  
+A real-time data ingestion gateway. Displays a continuous feed of sniffed network flows with Source/Destination IPs, AI Confidence percentages, and calculated Risk Scores (0-10). It supports both active interface sniffing and offline batch CSV processing via a drag-and-drop interface.
+
+### 3. Analytics & Alerts
+* **Analytics:** Visualizes the mathematical performance of the models, including the True Positive Rate vs. False Positive Rate trade-off, proving the high Area Under Curve (AUC) efficiency of the models.
+* **Prioritized Alerts:** High-risk alerts (Scores 8-10) trigger immediate visual warnings, mapped to the MITRE ATT&CK framework for one-click triage.
+
+---
 
 ## 🚀 Quick Start (TL;DR)
 
