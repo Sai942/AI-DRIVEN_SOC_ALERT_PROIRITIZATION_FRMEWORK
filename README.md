@@ -12,7 +12,7 @@ This project provides an end-to-end, AI-driven framework and interactive dashboa
 
 ## 📊 Model Performance
 
-![ROC Curve - Attack Detection](assets/Screenshot_2026-05-06_144246.png)  
+![ROC Curve - Attack Detection](img/roc.png)  
 *ROC Curve comparing the predictive power of Logistic Regression, XGBoost, and the production Random Forest model.*
 
 The framework evaluated Logistic Regression, XGBoost, and Random Forest against a strict 20% holdout test set (123,475 flows).
@@ -31,11 +31,11 @@ The Random Forest classifier emerged as the definitive champion. By utilizing en
 The final result of the framework is a fully operational, interactive Streamlit application designed for immediate SOC deployment.
 
 ### 1. Dashboard Overview
-![SOC-AI Dashboard Overview](assets/Screenshot_2026-05-06_143945.jpg)  
+![SOC-AI Dashboard Overview](img/dashboard.png)  
 The executive view displaying active alert counts categorized by severity (High/Medium/Low). Features real-time KPI tracking (FPR Estimate, Precision Est.), a visual Attack Distribution ring chart, and a live Alert Timeline graph tracking anomaly volume over the last 60 seconds.
 
 ### 2. Live Traffic Monitor
-![SOC-AI Live Traffic Monitor](assets/Screenshot_2026-05-06_144014.png)  
+![SOC-AI Live Traffic Monitor](img/sniffer.png)  
 A real-time data ingestion gateway. Displays a continuous feed of sniffed network flows with Source/Destination IPs, AI Confidence percentages, and calculated Risk Scores (0-10). It supports both active interface sniffing and offline batch CSV processing via a drag-and-drop interface.
 
 ### 3. Analytics & Alerts
