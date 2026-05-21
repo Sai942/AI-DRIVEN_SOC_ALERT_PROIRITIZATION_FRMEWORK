@@ -4,7 +4,7 @@ Modern Security Operations Centers (SOCs) are overwhelmed by "alert fatigue"—a
 
 This project provides an end-to-end, AI-driven framework and interactive dashboard designed to solve this problem. By leveraging network packet sniffing and machine learning (XGBoost/Ensemble models), the system analyzes, scores, and prioritizes security alerts in real time, allowing security teams to focus on the most critical threats first. 
 
-**Author:** Santhosh G A
+**Author:** Santhosh G A <br>
 *Developed with a core focus on practical Machine Learning Applications.*
 
 ---
